@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 import Snap from '../Component/Snap';
 
 class App extends Component {
@@ -25,7 +26,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Snap className="snap" shuffleDeck={this.shuffleDeck.bind(this)} deckOfCards={this.state.deckOfCards} />
+      <Router history={hashHistory}>
+        <Route/>
+          
+        </Router>
+        {/* <Snap className="snap" shuffleDeck={this.shuffleDeck.bind(this)} deckOfCards={this.state.deckOfCards} /> */}
       </div>
     );
   }
